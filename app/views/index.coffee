@@ -11,9 +11,17 @@ module.exports = class IndexView extends Backbone.View
 
     _resize: =>
         console.log "Resizing"
+        many = parseInt window.innerHeight / 300
+        manyH = 300 * many
         @$el.css
-            height: "#{300 * (parseInt(window.innerHeight / 300) + 1)}px"
-            width: "#{(parseInt(($('.box').length - 1) / 3) + 1) * 300}px"
+            height: window.innerHeight
+            width: parseInt(($('.box').length + 1) / 3) * 300
+        size = 300 + (window.innerHeight - manyH) / many
+        $(".box").css
+            height: size
+        if size isnt window.innerHeight
+            $(".box.me").css
+                height: size * 2
 
     render: =>
         @$el.html @template {
