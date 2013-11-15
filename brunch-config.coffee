@@ -35,7 +35,7 @@ exports.config =
                     level: "error"
 
                 max_line_length:
-                    value: 80
+                    value: 10000000
                     level: "error"
 
     conventions:
