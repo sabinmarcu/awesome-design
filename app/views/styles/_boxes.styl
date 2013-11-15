@@ -5,72 +5,115 @@ size = 250px
 body
     background #444
     section#app
+        width 100%
+        height 100%
         overflow-y hidden
         overflow-x auto
-        box-shadow 0 0 35px rgba(0, 0, 0, 0.4)
         perspective 600px
-        .box
-            width size
-            height size
-            float left
-            margin 0
-            padding 0
-            overflow hidden
-            border-right solid 1px bordercol
-            border-bottom solid 1px bordercol
-            position relative
-            font-family Roboto, inherit
-            perspective 600px
-            position relative
-            h1, h4
-                font-weight 100
-                position absolute
-                bottom meh4hei + 1
-                left 0
-                right 0
-                height meh1hei
-                text-indent 20px
-                padding 0
+        &::-webkit-scrollbar
+            display none
+        &::-webkit-scrollbar-track
+            display none
+        &::-webkit-scrollbar-thumb
+            display none
+        .slider
+            box-shadow 0 0 35px rgba(0, 0, 0, 0.4)
+            .box
+                width size
+                height size
+                float left
                 margin 0
-                line-height meh1hei
-                font-size 18pt
-                text-shadow 0 -1px 1px rgba(0, 0, 0, 0.8)
-                color white
-                font-weight light
-                background linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%) 
-                transition all 0.5s ease-in-out
-                opacity 0
-            h1
-                transform rotateY(90deg) rotateX(90deg) translateX(-50%)
-                transform-origin left center
-            h4
-                transform rotateY(-90deg) rotateX(-90deg) translateX(50%)
-                transform-origin right center
-            &:hover 
+                padding 0
+                overflow hidden
+                border-right solid 1px bordercol
+                border-bottom solid 1px bordercol
+                position relative
+                font-family Roboto, inherit
+                perspective 600px
+                position relative
+                ::-webkit-scrollbar
+                    width 10px
+                    height 10px
+                ::-webkit-scrollbar-track
+                    background rgba(0, 0, 0, 0.2)
+                    box-shadow 0 0 10px rgba(0, 0, 0, 0.2) inset
+                    &:hover
+                        background rgba(0, 0, 0, 0.4)
+
+                ::-webkit-scrollbar-thumb
+                    background rgba(256, 256, 256, 0.2)
+                    box-shadow 0 0 10px rgba(256, 256, 256, 0.2) inset
+                    transition all 0.5s ease-in-out
+                    &:hover
+                        background rgba(256, 256, 256, 0.6)
+                p
+                    position absolute
+                    left 0
+                    right 0
+                    top 0
+                    bottom meh1hei + meh4hei + 1
+                    z-index 1
+                    background rgba(0, 0, 0, 0.4)
+                    transition all 0.5s ease-in-out
+                    overflow-x hidden
+                    overflow-y auto
+                    transform rotateY(180deg)
+                    backspace-visibility hidden
+                    opacity 0
+                    margin 0
+                    padding 15px
+                    color #ccc
+                    font-weight normal
+                    font-size 10pt
                 h1, h4
-                    transform none
-                    opacity 1
+                    font-weight 100
+                    position absolute
+                    bottom meh4hei + 1
+                    z-index 2
+                    left 0
+                    right 0
+                    height meh1hei
+                    text-indent 20px
+                    padding 0
+                    margin 0
+                    line-height meh1hei
+                    font-size 18pt
+                    text-shadow 0 -1px 1px rgba(0, 0, 0, 0.8)
+                    color white
+                    font-weight light
+                    background linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%) 
+                    transition all 0.5s ease-in-out
+                    opacity 0
+                    transform translateY(100%)
+                h1
+                    transform translateY(meh1hei)
+                h4
+                    transform translateY(meh1hei)
+                &:hover 
+                    h1, h4, p
+                        transform none
+                        opacity 1
+                    &:after
+                        box-shadow 0 -50px 50px rgba(0, 0, 0, 0.2) inset
+                h4
+                    bottom 0
+                    height meh4hei
+                    line-height meh4hei
+                    font-size 10pt
+                > img
+                    position absolute
+                    z-index 0
+                    width 100%
+                    height 100%
+                    left 0
+                    top 0
                 &:after
-                    box-shadow 0 -50px 50px rgba(0, 0, 0, 0.2) inset
-            h4
-                bottom 0
-                height meh4hei
-                line-height meh4hei
-                font-size 10pt
-            > img
-                position absolute
-                z-index 0
-                width 100%
-                height 100%
-                left 0
-                top 0
-            &:after
-                display block
-                z-index 0
-                content ''
-                position absolute
-                left 0
-                top 0
-                width 100%
-                height 100%
-                transition all 0.5s ease-in-out
+                    display block
+                    z-index 0
+                    content ''
+                    position absolute
+                    left 0
+                    top 0
+                    width 100%
+                    height 100%
+                    transition all 0.5s ease-in-out

@@ -19,7 +19,7 @@ module.exports = class IndexView extends Backbone.View
         len = $('.box').length
         if size isnt window.innerHeight then len += 1
 
-        @$el.css
+        $(".slider").css
             height: window.innerHeight
             width: parseInt(len / many) * 250
 
@@ -39,7 +39,7 @@ module.exports = class IndexView extends Backbone.View
                     title: "Thing1"
                     tagline: "Thing1 explained in short"
                     image: "image1"
-                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, sapiente, aliquid, quaerat iste numquam sint quae esse pariatur sed praesentium nihil voluptatum placeat at expedita dolores ipsum corporis enim repudiandae."
+                    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, sapiente, aliquid, quaerat iste numquam sint quae esse pariatur sed praesentium nihil voluptatum placeat at expedita dolores ipsum corporis enim repudiandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, sapiente, aliquid, quaerat iste numquam sint quae esse pariatur sed praesentium nihil voluptatum placeat at expedita dolores ipsum corporis enim repudiandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, sapiente, aliquid, quaerat iste numquam sint quae esse pariatur sed praesentium nihil voluptatum placeat at expedita dolores ipsum corporis enim repudiandae."
                 }, {
                     title: "Thing2"
                     tagline: "Thing2 explained in short"
