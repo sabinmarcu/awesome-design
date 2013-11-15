@@ -1,0 +1,18 @@
+<article class="box me">
+	<img src="/images/Untitled-1.png" alt="" class="bg">
+	<div class="head">
+		<img src="/images/face.png" alt="my fucking face">
+	</div>
+	<h1>{{name}}</h1>
+	<h4>{{tagline}}</h4>
+</article>
+
+{{#each things}}
+	<div class="box">
+		<img src="/images/{{image}}.png" alt="" class="bg">
+		<h1>{{title}}</h1>
+		<h4>{{tagline}}</h4>
+	</div>
+{{/each}}
+
+{{!-- <br class="clear"> --}}
